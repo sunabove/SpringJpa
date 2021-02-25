@@ -3,6 +3,7 @@ package com.bbs;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -16,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 @SpringBootApplication
 @RestController
 @ComponentScan
-//@EnableJpaRepositories( "com.bbs.model" )
+@EnableJpaRepositories( "com.bbs" )
 //@EntityScan( basePackages = {"com.bbs.model"} )
 public class DemoApplication implements WebMvcConfigurer  {
 	
