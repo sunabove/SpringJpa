@@ -10,7 +10,10 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import org.thymeleaf.templateresolver.FileTemplateResolver;
 
 @Configuration
-public class ThymeLeafConfig implements WebMvcConfigurer {
+public class ThymeLeafConfig {
+	
+	public static final String rscFolder = "/DEV/WorkspaceSpring/MyTemplate/WebContent" ;
+	public static final String htmlFolder = rscFolder + "/html" ;
 
     public ThymeLeafConfig() {
     }
@@ -20,8 +23,8 @@ public class ThymeLeafConfig implements WebMvcConfigurer {
     public AbstractConfigurableTemplateResolver templateResolver() {
     	AbstractConfigurableTemplateResolver templateResolver = new FileTemplateResolver ();
     	
-    	String externalFolder = "/DEV/WorkspaceSpring/MyTemplate/WebContent/html/" ; 
-    	if( externalFolder.length() < 1 ) {
+    	String externalFolder = ThymeLeafConfig.htmlFolder ; 
+    	if( null == externalFolder || externalFolder.length() < 1 ) {
     		templateResolver = new ClassLoaderTemplateResolver();
     	} else if ( ! externalFolder.endsWith( "/")  ) {
     		externalFolder += "/" ; 
@@ -55,10 +58,6 @@ public class ThymeLeafConfig implements WebMvcConfigurer {
         viewResolver.setCharacterEncoding("UTF-8");
 
         return viewResolver;
-    }
-
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("index");
-    }
+    } 
+    
 }
