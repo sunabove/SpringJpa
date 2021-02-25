@@ -1,8 +1,6 @@
 package web.model;
 
-import java.beans.PropertyEditorSupport;
-
-import web.gson.DateDeserializer; 
+import java.beans.PropertyEditorSupport; 
 
 public class CustomTimestampEditor extends PropertyEditorSupport {
 
