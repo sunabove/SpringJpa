@@ -1,4 +1,4 @@
-package web.controller;
+package web.model;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -27,10 +27,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import lombok.extern.slf4j.Slf4j;
-import web.model.DbFile;
-import web.model.DbFileList;
-import web.model.DbFileLog;
-import web.model.DbFileRepository;
 
 @RequestMapping("/data")
 @Controller

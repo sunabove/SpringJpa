@@ -4,9 +4,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import web.SysConfig;
-import web.WebObject;
-
 public abstract class ServicCommon extends WebObject { 
 	
 	private static final long serialVersionUID = 7177373740030139060L;

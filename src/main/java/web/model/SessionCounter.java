@@ -1,4 +1,4 @@
-package web.spring;
+package web.model;
 
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 
 import lombok.extern.log4j.Log4j;
 import lombok.extern.slf4j.Slf4j;
-import web.controller.ArticleController;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;

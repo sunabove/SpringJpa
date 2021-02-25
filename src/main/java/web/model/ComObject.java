@@ -1,4 +1,4 @@
-package web;
+package web.model;
 
 import java.io.Serializable;
 import java.sql.Timestamp;

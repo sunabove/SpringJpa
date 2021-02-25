@@ -1,4 +1,4 @@
-package web.controller;
+package web.model;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -8,9 +8,6 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import web.model.User;
-import web.model.UserList;
 
 @RequestMapping("/user")
 @Controller

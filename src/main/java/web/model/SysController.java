@@ -1,4 +1,4 @@
-package web.controller;
+package web.model;
 
 import java.util.HashMap;
 
@@ -12,7 +12,6 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import lombok.extern.slf4j.Slf4j;
-import web.model.*;
 
 @RequestMapping("/sys")
 @Controller

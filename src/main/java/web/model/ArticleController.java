@@ -1,4 +1,4 @@
-package web.controller;
+package web.model;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -9,8 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import lombok.extern.slf4j.Slf4j;
-import web.model.*; 
+import lombok.extern.slf4j.Slf4j; 
 
 @RequestMapping("/article")
 @Controller

@@ -1,4 +1,4 @@
-package web.controller;
+package web.model;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
@@ -20,20 +20,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import web.CustomTimestampEditor;
-import web.Html;
-import web.SysConfig;
-import web.WebObject;
+import lombok.extern.slf4j.Slf4j;
 import web.gson.DateDeserializer;
 import web.gson.TimestampDeserializer;
 
-import web.model.*;
-
+@Slf4j
 public abstract class ComController extends WebObject {
 
 	private static final long serialVersionUID = -2104510560222014738L;
-
-	private static final Logger log = LoggerFactory.getLogger(ComController.class);
 
 	private static final boolean debug = true;
 

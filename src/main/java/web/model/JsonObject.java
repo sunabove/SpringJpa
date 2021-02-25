@@ -1,4 +1,4 @@
-package web; 
+package web.model; 
 
 import com.google.gson.Gson;
 

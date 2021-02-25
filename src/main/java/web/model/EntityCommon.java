@@ -13,7 +13,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import lombok.Getter;
 import lombok.Setter; 
-import web.WebObject; 
 
 @MappedSuperclass
 public abstract class EntityCommon extends WebObject {
