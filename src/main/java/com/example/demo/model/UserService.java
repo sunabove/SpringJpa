@@ -83,7 +83,7 @@ public class UserService extends ServicCommon {
 				//Code userRoleNormal = this.getCode( "USER-ROLE-NORMAL", "사용자", 1 );
 				
 				User newUser = new User( sysConfig.defaultSupserUserId, sysConfig.defaultSupserUserPasswd , userRoleAdmin ); 
-				newUser.email = "procom@procom.co.kr";
+				newUser.email = "sunabove@nate.com";
 				
 				this.userRepository.save( newUser );
 	
