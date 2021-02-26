@@ -12,7 +12,7 @@ import org.thymeleaf.templateresolver.FileTemplateResolver;
 @Configuration
 public class ThymeLeafConfig {
 	
-	public static final String rscFolder = "/DEV/WorkspaceSpring/MyTemplate/WebContent" ;
+	public static final String rscFolder = "/DEV/WorkspaceSpringBoard/MyTemplate/WebContent" ;
 	public static final String htmlFolder = rscFolder + "/html" ;
 
     public ThymeLeafConfig() {
