@@ -22,14 +22,13 @@ import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.example.demo.config.ThymeLeafConfig;
+import com.example.demo.model.ComInterface;
 
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public class ServletInitializer extends SpringBootServletInitializer {
+public class ServletInitializer extends SpringBootServletInitializer implements ComInterface {
 	
-	public static final String LINE = "#".repeat(40);
-
 	public ServletInitializer() {
 		log.info(LINE);
 		log.info( this.getClass().getSimpleName() );

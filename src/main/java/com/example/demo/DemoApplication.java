@@ -20,19 +20,22 @@ import lombok.extern.slf4j.Slf4j;
 @ComponentScan
 //@EnableJpaRepositories( "com.bbs" )
 //@EntityScan( basePackages = {"com.bbs"} )
-public class DemoApplication implements WebMvcConfigurer  {
+public class DemoApplication implements WebMvcConfigurer {
 	
-	public static final String LINE = "#".repeat(40);
+	public static final String LINE = "#".repeat(80);
 	
 	@Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("index");
+		var regiTrue = 1 == 2 ;
+		if( regiTrue ) { 
+			registry.addViewController("/").setViewName("index.html"); 
+		}
     }
 	
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		log.info(LINE);
-		String funName = "addResourceHandlers(ResourceHandlerRegistry registry)";		
+		String funName = "ADD RESOURCE HANDLER";		
 		log.info(funName);
 
 		// resource (css,js,img) resource location

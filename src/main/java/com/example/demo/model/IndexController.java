@@ -7,16 +7,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-@RequestMapping("/main")
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Controller
 public class IndexController extends ComController {
 
 	private static final long serialVersionUID = -1215549637589312065L;
 	
 	@Autowired UserService userService ;
-
-	@RequestMapping( value = { "index_02.html" , "main.html" } )
+	
+	@RequestMapping( value = { "/" , } )
 	public String index( HttpServletRequest request, RedirectAttributes ra ) {
+		log.info( "I am here." );
+		
+		return "redirect:/index.html";
+	}
+
+	@RequestMapping( value = { "/main/index_02.html" , "/main/main.html" } )
+	public String indexMain( HttpServletRequest request, RedirectAttributes ra ) {
 		
 		var loginRequire = true ;
 		
@@ -38,9 +47,8 @@ public class IndexController extends ComController {
 		}
 	} 
 	
-	@RequestMapping( "list.html" )
-	public String list( HttpServletRequest request ) { 
-		
+	@RequestMapping( "/main/list.html" )
+	public String mainList( HttpServletRequest request ) { 
 		var loginRequire = true ;
 		
 		this.processRequest( userService, request, loginRequire ) ; 

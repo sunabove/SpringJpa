@@ -103,9 +103,9 @@ public class SysController extends ComController {
 			RedirectAttributes ra ) {
 		var debug = true ;
 		if( debug ) {
-			log.info( "LINE" );
+			log.info( LINE );
 			log.info( "settingByPost(...)" );
-			log.info( "LINE" );
+			log.info( LINE );
 		}
 		
 		var loginRequire = this.loginRequire ;

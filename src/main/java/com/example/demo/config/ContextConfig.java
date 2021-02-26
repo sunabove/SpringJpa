@@ -11,7 +11,7 @@ public class ContextConfig {
 	@Bean
 	public WebServerFactoryCustomizer<ConfigurableServletWebServerFactory>
 	  webServerFactoryCustomizer() {
-	    return factory -> factory.setContextPath("/myDemo");
+	    return factory -> factory.setContextPath("/bbs");
 	}
 
 }

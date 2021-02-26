@@ -11,11 +11,9 @@ import java.util.UUID;
 
 import org.apache.commons.lang3.StringUtils;
 
-public abstract class ComObject implements Serializable {
+public abstract class ComObject implements Serializable, ComInterface {
 	
 	private static final long serialVersionUID = -1306037807300118182L;
-
-	public static final String LINE = "#####################################################################################################################";
 	
 	public boolean isEqualString( String a , String b ) {
 		if( null == a || null == b ) {
