@@ -36,9 +36,9 @@ public class DemoApplication implements WebMvcConfigurer  {
 		log.info(funName);
 
 		// resource (css,js,img) resource location
-		if (!registry.hasMappingForPattern("/rsc/**")) {
+		if (!registry.hasMappingForPattern("**/rsc/**")) {
 			registry
-			.addResourceHandler("/rsc/**")
+			.addResourceHandler("**/rsc/**")
 			.addResourceLocations("file:" + ThymeLeafConfig.rscFolder + "/");
 		}
 
