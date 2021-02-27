@@ -1,9 +1,8 @@
 package com.example.demo.config;
 
-import org.springframework.boot.web.server.WebServerFactoryCustomizer;
-import org.springframework.boot.web.servlet.server.ConfigurableServletWebServerFactory;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.web.server.*;
+import org.springframework.boot.web.servlet.server.*;
+import org.springframework.context.annotation.*;
 
 @Configuration
 public class ContextConfig {
