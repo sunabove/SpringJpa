@@ -4,41 +4,41 @@ import java.sql.Timestamp;
 import javax.persistence.*;
 import javax.servlet.http.HttpServletRequest;
 
-import lombok.Getter;
-import lombok.Setter; 
+import lombok.*; 
 
 @Entity 
 @Table(name = "article_tbl")
-
+@Data 
+@EqualsAndHashCode(callSuper=false)
 public class Article extends EntityCommon { 
 
 	private static final long serialVersionUID = 7669363100960406954L;
 
 	@Id @GeneratedValue(strategy=GenerationType.IDENTITY) 
 	@Column( updatable = false, nullable = false)
-	@Getter @Setter public Long articleId ;
+	public Long articleId ;
 	
 	@ManyToOne
     @JoinColumn( name="board_id" ) 
-	@Getter @Setter public Board board ;
+	public Board board ;
 	
 	@OneToOne
-	@Getter @Setter public User writer ;
+	public User writer ;
 	
 	@Column( name="is_notice" )
-	@Getter @Setter public Boolean notice ; 
+	public Boolean notice ; 
 	
-	@Getter @Setter public String title ;
+	public String title ;
 	
 	@Lob
-	@Getter @Setter public String content ; 
+	public String content ; 
 	
 	@Column(name = "content_type")
-	@Getter @Setter public String type = "TXT" ;
+	public String type = "TXT" ;
 	
-	@Getter @Setter public Integer viewCount = 0 ;
+	public Integer viewCount = 0 ;
 	
-	@Getter @Setter public Timestamp saveDt ;
+	public Timestamp saveDt ;
 	
 	public Article() {
 	}

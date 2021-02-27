@@ -11,27 +11,26 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.hibernate.annotations.UpdateTimestamp;
 
-import lombok.Getter;
-import lombok.Setter; 
+import lombok.*; 
 
 @MappedSuperclass
+@Data
 public abstract class EntityCommon extends WebObject {
 	
 	private static final long serialVersionUID = 1965816637576317996L;
 
 	@OneToOne
 	@JoinColumn( name = "UP_USER_ID" )
-	@Getter @Setter public User upUser ;
+	public User upUser ;
 	
 	@UpdateTimestamp
-	@Getter @Setter public Timestamp upDt ;
+	public Timestamp upDt ;
 	
-	@Getter @Setter public Boolean deleted = false ;
+	public Boolean deleted = false ;
 	
-	@Getter @Setter public transient int rowNumer = 0 ; 
+	public transient int rowNumer = 0 ; 
 	
-	public EntityCommon() {
-	}
+	public EntityCommon() { }
 	
 	@PreUpdate
     @PrePersist
