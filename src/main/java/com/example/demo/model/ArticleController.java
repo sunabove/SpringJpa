@@ -57,7 +57,8 @@ public class ArticleController extends ComController {
 
 	// articleView
 	@RequestMapping(value = { "view.html" })
-	@GetMapping @PostMapping
+	@GetMapping 
+	@PostMapping
 	public String articleView(HttpServletRequest request, RedirectAttributes ra ) {
 		var debug = true ;
 		var loginRequire = true;
