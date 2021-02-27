@@ -6,10 +6,8 @@ import javax.servlet.http.HttpServletRequest;
 
 import lombok.*; 
 
-@Entity 
-@Table(name = "article_tbl")
-@Data 
-@EqualsAndHashCode(callSuper=false)
+@Entity @Table(name = "article_tbl")
+@Data @EqualsAndHashCode(callSuper=false)
 public class Article extends EntityCommon { 
 
 	private static final long serialVersionUID = 7669363100960406954L;
