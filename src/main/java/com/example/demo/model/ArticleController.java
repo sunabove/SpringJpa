@@ -7,13 +7,13 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import lombok.extern.slf4j.Slf4j; 
 
-@RequestMapping("/article")
-@Controller
+@Controller 
+@RequestMapping( value="/article" )
 @Slf4j
 public class ArticleController extends ComController {
 
@@ -24,6 +24,7 @@ public class ArticleController extends ComController {
 	@Autowired private ArticleRepository articleRepository; 
 
 	@RequestMapping(value = { "index.html", "main.html", "list.html" })
+	@GetMapping
 	public String articleList(HttpServletRequest request , @PageableDefault(size = 10) Pageable pageable ) {
 		var loginRequire = true;
 
@@ -56,6 +57,7 @@ public class ArticleController extends ComController {
 
 	// articleView
 	@RequestMapping(value = { "view.html" })
+	@GetMapping @PostMapping
 	public String articleView(HttpServletRequest request, RedirectAttributes ra ) {
 		var debug = true ;
 		var loginRequire = true;
@@ -86,8 +88,7 @@ public class ArticleController extends ComController {
 		} else if( "delete".equalsIgnoreCase( cmd ) ) {
 			article = this.articleService.deleteArticle(article, request);
 			
-			forward = "redirect:/article/list.html";
-			
+			forward = "redirect:/article/list.html";			
 		} else if( null != article ) {
 			if( debug ) {
 				log.info( "prev article saveDt = " + article.saveDt );
@@ -108,6 +109,7 @@ public class ArticleController extends ComController {
 		
 		if( null == article ) {
 			var loginUser = this.getLoginUser(request);
+			
 			article = new Article();
 			article.updateUpUser( request );
 			article.writer = loginUser ; 
