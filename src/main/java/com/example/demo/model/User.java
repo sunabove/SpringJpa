@@ -26,13 +26,13 @@ public class User extends EntityCommon {
 	@Column( length = 191 )
 	public String userId ;  
 	
+	public String name;
+	
 	public String passwd;	
 	public String email; 
 	
 	@OneToOne @JoinColumn(name = "roleCode")
 	public Code role ;
-	
-	public String name;
 	
 	@Column( length = 191, name="email_uuid"  )
 	public String emailUuid;
