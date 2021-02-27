@@ -1,43 +1,43 @@
 package com.example.demo.model;
 
+import java.sql.Timestamp;
+
 import javax.persistence.*;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
-@Table( name = "db_file_log_tbl" )
-
+@Entity @Table( name = "db_file_log_tbl" )
+@Data @EqualsAndHashCode(callSuper=false)
 public class DbFileLog extends EntityCommon {  
 
 	private static final long serialVersionUID = 4024002681670288781L;
 
 	@Id
 	@Column(length=191)
-	@Getter @Setter public String fileLogId ;
+	public String fileLogId ;
 
 	@OneToOne 
-	@Getter @Setter public User downloadUser ;  
+	public User downloadUser ;  
 	
 	@OneToOne 
-	@Getter @Setter public DbFile downloadFile ;  
+	public DbFile downloadFile ;  
 	
 	@Column(length=191)
-	@Getter @Setter public String gubun ;  
+	public String gubun ;  
 	
 	@Column(length=191)
-	@Getter @Setter public String filePath ;  
+	public String filePath ;  
 	
-	@Getter @Setter public Integer fizeSize ;  
-	
-	@Getter @Setter public int accessCount = 0 ;  
-	
-	@Getter @Setter public int downloadCount = 0 ;  
-	
-	@Getter @Setter public Boolean dowloadResult ;  
+	public Integer fizeSize ;
+	public int accessCount = 0 ;
+	public int downloadCount = 0 ;
+	public Boolean dowloadResult ;  
 	
 	@Column(length=191)
-	@Getter @Setter public String ipAddr ;  
+	public String ipAddr ;  
 	
 	public DbFileLog() {
 	}  

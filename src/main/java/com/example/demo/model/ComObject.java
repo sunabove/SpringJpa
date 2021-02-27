@@ -2,12 +2,8 @@ package com.example.demo.model;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.UUID;
+import java.text.*;
+import java.util.*; 
 
 import org.apache.commons.lang3.StringUtils;
 

@@ -4,6 +4,8 @@ import java.sql.Timestamp;
 
 import javax.persistence.*;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter; 
 
@@ -15,29 +17,28 @@ import lombok.Setter;
 				@Index(name = "user_tbl_idx_email_uuid", columnList="email_uuid", unique = false)
 			}
 		)
-
+@Data @EqualsAndHashCode(callSuper=false)
 public class User extends EntityCommon { 
 	
 	private static final long serialVersionUID = -6023492649132057963L;
 
 	@Id
 	@Column( length = 191 )
-	@Getter @Setter public String userId ;  
+	public String userId ;  
 	
-	@Getter @Setter public String passwd;	
-	@Getter @Setter public String email; 
+	public String passwd;	
+	public String email; 
 	
-	@OneToOne
-	@JoinColumn(name = "roleCode")
-	@Getter @Setter public Code role ;
+	@OneToOne @JoinColumn(name = "roleCode")
+	public Code role ;
 	
-	@Getter @Setter public String name;
+	public String name;
 	
 	@Column( length = 191, name="email_uuid"  )
-	@Getter @Setter public String emailUuid;
+	public String emailUuid;
 	
-	@Getter @Setter public Timestamp lastLoginDt ;
-	@Getter @Setter public Timestamp lastLogOutDt ;
+	public Timestamp lastLoginDt ;
+	public Timestamp lastLogOutDt ;
 	
 	public User() {
 	}

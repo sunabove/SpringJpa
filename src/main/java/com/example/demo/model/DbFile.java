@@ -5,6 +5,8 @@ import java.sql.Timestamp;
 
 import javax.persistence.*;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,34 +16,34 @@ import lombok.Setter;
 		 @Index(name = "file_no_ext", columnList = "file_ext")
  		}
 )
-
+@Data @EqualsAndHashCode(callSuper=false)
 public class DbFile extends EntityCommon { 
 	private static final long serialVersionUID = -8745797345335307150L;
 
-	@Id
-	@Column( length = 191 )
-	@Getter @Setter public String fileId ;
+	@Id	@Column( length = 191 )
+	public String fileId ;
 
 	@Column( length = 191 )
-	@Getter @Setter public String gubunCode ;
+	public String gubunCode ;
 	
 	@Column( name="file_no", length = 191 )
-	@Getter @Setter public String fileNo ;
+	public String fileNo ;
 
 	@Column(length=191)
-	@Getter @Setter public String fileName ;
+	public String fileName ;
 	
 	@Column(length=1000)
-	@Getter @Setter public String filePath ;
+	public String filePath ;
 	
 	@Column( name="file_ext", length=191)
-	@Getter @Setter public String fileExt ;
+	public String fileExt ;
 	
-	@Getter @Setter public Timestamp fileModDt ;
+	public Timestamp fileModDt ;
 
-	@Lob @Getter @Setter public byte [] content;
+	@Lob
+	public byte [] content;
 	
-	@Getter @Setter public transient DbFile pairDbFile ;
+	public transient DbFile pairDbFile ;
 
 	public DbFile() {
 	}

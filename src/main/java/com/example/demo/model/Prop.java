@@ -1,21 +1,22 @@
 package com.example.demo.model; 
+import java.sql.Timestamp;
+
 import javax.persistence.*;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter; 
 
-@Entity
-@Table(name = "prop_tbl")
-
+@Entity @Table(name = "prop_tbl")
+@Data @EqualsAndHashCode(callSuper=false)
 public class Prop extends EntityCommon { 
 
 	private static final long serialVersionUID = -2672345814320804684L;
 
-	@Id
-	@Column( length = 191 )
-	@Getter @Setter public String propId ;  
-	
-	@Getter @Setter public String value ;	
+	@Id	@Column( length = 191 )
+	public String propId ;
+	public String value ;	
 	
 	public Prop() {
 	}

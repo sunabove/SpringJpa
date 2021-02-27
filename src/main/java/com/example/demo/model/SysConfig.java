@@ -1,24 +1,25 @@
 package com.example.demo.model;
 
+import java.sql.Timestamp;
+
 import org.springframework.stereotype.Component;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 @Component
+@Data @EqualsAndHashCode(callSuper=false)
 public class SysConfig extends JsonObject {
 
 	private static final long serialVersionUID = 34910595661725712L;
 	
-	@Getter @Setter public String defaultSupserUserId = "admin";
-	
-	@Getter @Setter public String defaultSupserUserPasswd = "12345678";
-	
-	@Getter @Setter public Long defaultBoardId = 1L ;
-	
-	@Getter @Setter public boolean showLoginId = false ;
-	
-	@Getter @Setter public String defaultAdminId = "admin" ;
+	public String defaultSupserUserId = "admin";
+	public String defaultSupserUserPasswd = "12345678";
+	public Long defaultBoardId = 1L ;
+	public boolean showLoginId = false ;
+	public String defaultAdminId = "admin" ;
 	
 	public SysConfig() {
 	}
