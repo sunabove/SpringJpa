@@ -24,7 +24,6 @@ public class ArticleController extends ComController {
 	@Autowired private ArticleRepository articleRepository; 
 
 	@RequestMapping(value = { "index.html", "main.html", "list.html" })
-	@GetMapping
 	public String articleList(HttpServletRequest request , @PageableDefault(size = 10) Pageable pageable ) {
 		var loginRequire = true;
 

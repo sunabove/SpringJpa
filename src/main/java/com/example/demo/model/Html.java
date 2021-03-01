@@ -1,8 +1,9 @@
 package com.example.demo.model;
 
-import lombok.Data;
+import lombok.*;
 
 @Data
+@EqualsAndHashCode(callSuper=false)
 public class Html extends WebObject {
 
 	private static final long serialVersionUID = -4453059108163709106L;

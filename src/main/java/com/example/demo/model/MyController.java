@@ -14,6 +14,11 @@ public class MyController {
 		model.addAttribute("name", name);		
 		model.addAttribute("tasks", tasks);
 		
+		if( false ) { 
+			String a = null ;
+			a.length();
+		}
+		
 		return "NewFile.html"; 
 	}
 }
