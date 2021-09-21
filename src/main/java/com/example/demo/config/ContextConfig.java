@@ -10,7 +10,7 @@ public class ContextConfig {
 	@Bean
 	public WebServerFactoryCustomizer<ConfigurableServletWebServerFactory>
 	  webServerFactoryCustomizer() {
-	    return factory -> factory.setContextPath("/bbs");
+	    return factory -> factory.setContextPath("/MyBoard");
 	}
 
 }
