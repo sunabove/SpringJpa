@@ -12,8 +12,8 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void 
 	configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.inMemoryAuthentication()
-		.withUser("user").password("{noop}user").roles("USER").and()
-		.withUser("admin").password("{noop}admin").roles("ADMIN")
+		.withUser("user").password("{noop}a").roles("USER").and()
+		.withUser("admin").password("{noop}a").roles("ADMIN")
 		;
 	}
 	

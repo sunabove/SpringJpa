@@ -14,8 +14,8 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @SpringBootApplication
 @ComponentScan
-//@EnableJpaRepositories( "com.bbs" )
-//@EntityScan( basePackages = {"com.bbs"} )
+//@EnableJpaRepositories( "com.example.demo.model" )
+//@EntityScan( basePackages = {"com.example.demo.model"} )
 public class DemoApplication implements WebMvcConfigurer {
 	
 	public static final String LINE = "#".repeat(80);
