@@ -16,7 +16,7 @@ public class SysConfig extends JsonObject {
 	private static final long serialVersionUID = 34910595661725712L;
 	
 	public String defaultSupserUserId = "admin";
-	public String defaultSupserUserPasswd = "123456";
+	public String defaultSupserUserPasswd = "a";
 	public Long defaultBoardId = 1L ;
 	public boolean showLoginId = false ;
 	public String defaultAdminId = "admin" ;
