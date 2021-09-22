@@ -12,13 +12,8 @@ public class MyController {
 		
 		model.addAttribute("myData", "Good Morning!");
 		model.addAttribute("name", name);		
-		model.addAttribute("tasks", tasks);
+		model.addAttribute("tasks", tasks); 
 		
-		if( false ) { 
-			String a = null ;
-			a.length();
-		}
-		
-		return "NewFile.html"; 
+		return "myHello.html"; 
 	}
 }

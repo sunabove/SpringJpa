@@ -21,7 +21,8 @@ public class IndexController extends ComController {
 	public String index( HttpServletRequest request, RedirectAttributes ra ) {
 		log.info( "I am here." );
 		
-		return "redirect:/index.html";
+		//return "redirect:/index.html";
+		return "index.html";
 	}
 
 	@RequestMapping( value = { "/main/index_02.html" , "/main/main.html" } )
